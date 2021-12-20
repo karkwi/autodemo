@@ -23,4 +23,7 @@ public class PropertyHelper {
             e.printStackTrace();
         }
         }
+    public String get(String key) {
+        return properties.getProperty(key);
+    }
 }
