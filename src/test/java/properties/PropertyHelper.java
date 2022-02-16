@@ -13,7 +13,7 @@ public class PropertyHelper {
 
     public PropertyHelper(String fileName) {
         try{
-            inputStream = new FileInputStream("src/main/properties/"+fileName);
+            inputStream = new FileInputStream("./src/main/properties/"+fileName);
                 } catch (FileNotFoundException e){
             e.printStackTrace();
             }
@@ -23,4 +23,7 @@ public class PropertyHelper {
             e.printStackTrace();
         }
         }
+    public String get(String key) {
+        return properties.getProperty(key);
+    }
 }

@@ -3,7 +3,14 @@ package properties;
 
 
 public enum VerifyNavigationProperties {
-    AUTOTEST_WEBSITE;
+    AUTOTEST_WEBSITE,
+    CLOTHES_TAB,
+    WOMEN_TAB,
+    WOMEN_URL;
 
-    private final static PropertyHelper propertyHelper = new PropertyHelper("properties/VerifyNavigation.properties");
+    private final static PropertyHelper propertyHelper = new PropertyHelper("VerifyNavigation.properties");
+
+    public String get() {
+        return propertyHelper.get(this.name());
+    }
 }
