@@ -5,7 +5,8 @@ package properties;
 public enum VerifyNavigationProperties {
     AUTOTEST_WEBSITE,
     CLOTHES_TAB,
-    WOMEN_TAB;
+    WOMEN_TAB,
+    WOMEN_URL;
 
     private final static PropertyHelper propertyHelper = new PropertyHelper("VerifyNavigation.properties");
 
