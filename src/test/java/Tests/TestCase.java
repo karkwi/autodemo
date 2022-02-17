@@ -8,6 +8,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -17,6 +18,7 @@ import org.testng.annotations.BeforeMethod;
 public class TestCase {
     public static WebDriver driver;
     public static WebDriverWait driverWait;
+    public static Actions actions;
 
 
 
@@ -24,6 +26,7 @@ public class TestCase {
     protected void beforeEachTest() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        actions = new Actions(driver);
      }
 
 
